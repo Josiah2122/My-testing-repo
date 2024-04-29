@@ -1,0 +1,19 @@
+/* 
+@media print {
+    /* Hide elements not meant for printing 
+    body * {
+      visibility: visible;
+    }
+  
+    /* Show only specific elements 
+    .print-content {
+      visibility: hidden;
+    }
+  
+    /* Additional styles for specific elements 
+    .print-content .document-title {
+      /* font-size: 20px;
+      font-weight: bold; 
+      visibility: hidden;
+    }
+  } */

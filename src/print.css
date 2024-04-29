@@ -1,0 +1,40 @@
+/* print.css */
+
+/* Styles for the entire page */
+@media print {
+  /* Hide the print button when printing */
+  button {
+    display: none;
+  }
+
+  /* Style the container for printed content */
+  .print-container {
+    display: block;
+    margin-top: 150px;
+  }
+
+  /* Style the IsoComponent for printing */
+  .iso-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .main-content {
+    margin-top: 150px;
+  }
+  /* .iso-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .main-content {
+    margin-top: 150px; 
+  } */
+  /* @page {
+    margin-top: 250px; 
+  } */
+}

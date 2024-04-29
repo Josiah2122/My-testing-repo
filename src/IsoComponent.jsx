@@ -114,13 +114,14 @@ export default function IsoComponent() {
         </div>
       </div>
 
-      <Box sx={{ width: "100%", marginTop: "50px" }}>
+      {/* Change the dives to use stack
+       <Box sx={{ width: "100%", marginTop: "50px" }}>
         <Stack direction="row" sx={{ margin: "auto" }}>
           <Item>Item 1</Item>
           <Item>Item 2</Item>
           <Item>Item 3</Item>
         </Stack>
-      </Box>
+      </Box> */}
     </>
   );
 }

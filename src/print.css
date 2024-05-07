@@ -9,7 +9,7 @@
 
   /* Style the container for printed content */
   .print-container {
-    display: block;
+    display: absolute;
     margin-top: 150px;
   }
 
@@ -19,22 +19,18 @@
     top: 0;
     width: 100%;
     z-index: 1000;
+    padding: 10px;
   }
 
   .main-content {
     margin-top: 150px;
   }
-  /* .iso-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  @page {
+    @top-center {
+      content: "Header Text";
+    }
+    @bottom-center {
+      content: "Footer Text";
+    }
   }
-  .main-content {
-    margin-top: 150px; 
-  } */
-  /* @page {
-    margin-top: 250px; 
-  } */
 }

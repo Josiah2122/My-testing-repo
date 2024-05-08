@@ -9,9 +9,9 @@ import IsoComponent from "./IsoComponent";
 function App() {
   // const [count, setCount] = useState(0);
   const handlePrint = () => {
-    // window.onbeforeprint = () => {
-    //   window.remove();
-    // };
+    window.onbeforeprint = () => {
+      window.remove();
+    };
     window.print();
   };
 

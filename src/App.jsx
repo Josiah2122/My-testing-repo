@@ -5,6 +5,7 @@ import "./App.css";
 import "./print.css";
 // import TopThree from "./TopThree";
 import IsoComponent from "./IsoComponent";
+import ChartPractice from "./ChartPractice";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -18,11 +19,12 @@ function App() {
   return (
     <>
       {/* <TopThree /> */}
-      <button onClick={handlePrint}>Print</button>
+      {/* <button onClick={handlePrint}>Print</button>
       <div className="iso-header">
         <IsoComponent />
-      </div>
-      <div className="print-container">
+      </div> */}
+      <ChartPractice />
+      {/* <div className="print-container">
         <div style={{ width: "70%", margin: "auto", marginTop: "50px" }}>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nobis
@@ -105,7 +107,7 @@ function App() {
             modi est minus?
           </p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -6,6 +6,7 @@ import "./print.css";
 // import TopThree from "./TopThree";
 import IsoComponent from "./IsoComponent";
 import ChartPractice from "./ChartPractice";
+import SingleMaterial from "./Pages/TestingMaterial/SingleMaterial";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -23,7 +24,7 @@ function App() {
       <div className="iso-header">
         <IsoComponent />
       </div> */}
-      <ChartPractice />
+      {/* <ChartPractice /> */}
       {/* <div className="print-container">
         <div style={{ width: "70%", margin: "auto", marginTop: "50px" }}>
           <p>
@@ -108,6 +109,7 @@ function App() {
           </p>
         </div>
       </div> */}
+      <SingleMaterial />
     </>
   );
 }

@@ -21,7 +21,7 @@ export default function SingleMaterial() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setItems({ ...myObj, [name]: value });
+    setItems({ ...items, [name]: value });
   };
 
   const handleSubmit = (e) => {
@@ -40,6 +40,7 @@ export default function SingleMaterial() {
           index={index}
           items={items}
           setItems={setItems}
+          handleChange={handleChange}
         />
       ))}
       <Button variant="contained" type="submit">

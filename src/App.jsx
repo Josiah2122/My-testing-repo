@@ -7,6 +7,7 @@ import "./print.css";
 import IsoComponent from "./IsoComponent";
 import ChartPractice from "./ChartPractice";
 import SingleMaterial from "./Pages/TestingMaterial/SingleMaterial";
+import AlignmentTesting from "./Pages/AlignmentTesting/AlignmentTesting";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -20,12 +21,12 @@ function App() {
   return (
     <>
       {/* <TopThree /> */}
+      {/* <ChartPractice /> */}
       {/* <button onClick={handlePrint}>Print</button>
       <div className="iso-header">
         <IsoComponent />
-      </div> */}
-      {/* <ChartPractice /> */}
-      {/* <div className="print-container">
+      </div>
+      <div className="print-container">
         <div style={{ width: "70%", margin: "auto", marginTop: "50px" }}>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nobis
@@ -109,7 +110,8 @@ function App() {
           </p>
         </div>
       </div> */}
-      <SingleMaterial />
+      {/* <SingleMaterial /> */}
+      <AlignmentTesting />
     </>
   );
 }

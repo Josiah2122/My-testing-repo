@@ -1,0 +1,67 @@
+.headerContainer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.headerText {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.headerImage {
+  display: block;
+  margin: 0 auto;
+}
+
+.printButton {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.printButton:hover {
+  background-color: #0056b3;
+}
+
+/* Hide print button in print preview */
+@media print {
+  .printButton {
+    display: none;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .headerContainer,
+  .headerContainer * {
+    visibility: visible;
+  }
+
+  .headerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .main-Content {
+    margin-top: 150px; /* Adjust this value based on your header height */
+  }
+
+  .main-Content p {
+    page-break-inside: avoid;
+  }
+}
+
+.main-Content {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}

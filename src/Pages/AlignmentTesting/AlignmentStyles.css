@@ -1,9 +1,6 @@
-.headerContainer {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
+/* General styles */
 .headerText {
+  text-align: center;
   font-size: 24px;
   margin: 20px 0;
 }
@@ -29,19 +26,16 @@
   background-color: #0056b3;
 }
 
-/* Hide print button in print preview */
+.main-Content {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Print-specific styles */
 @media print {
   .printButton {
     display: none;
-  }
-
-  body * {
-    visibility: hidden;
-  }
-
-  .headerContainer,
-  .headerContainer * {
-    visibility: visible;
   }
 
   .headerContainer {
@@ -49,19 +43,34 @@
     top: 0;
     left: 0;
     width: 100%;
+    text-align: center;
+    background: white;
+    z-index: 1;
+    padding-top: 20px;
+    height: 100px; /* Adjust this value based on your header height */
   }
 
   .main-Content {
     margin-top: 150px; /* Adjust this value based on your header height */
+    position: relative;
+    z-index: 1;
+    page-break-inside: avoid;
   }
 
   .main-Content p {
-    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: avoid;
   }
-}
 
-.main-Content {
-  padding: 20px;
-  font-size: 16px;
-  line-height: 1.5;
+  @page {
+    margin: 20mm;
+  }
+
+  @page :first {
+    margin-top: 20mm; /* Adjust this value based on your header height */
+  }
+
+  @page :left, :right {
+    margin-top: 50mm; /* Adjust this value based on your header height */
+  }
 }

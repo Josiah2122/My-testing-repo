@@ -1,22 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import "./print.css";
-// import TopThree from "./TopThree";
-import IsoComponent from "./IsoComponent";
-import ChartPractice from "./ChartPractice";
-import SingleMaterial from "./Pages/TestingMaterial/SingleMaterial";
-import AlignmentTesting from "./Pages/AlignmentTesting/AlignmentTesting";
 
 function App() {
   // const [count, setCount] = useState(0);
-  const handlePrint = () => {
-    window.onbeforeprint = () => {
-      window.remove();
-    };
-    window.print();
-  };
+  // const handlePrint = () => {
+  //   window.onbeforeprint = () => {
+  //     window.remove();
+  //   };
+  //   window.print();
+  // };
 
   return (
     <>
@@ -111,7 +102,7 @@ function App() {
         </div>
       </div> */}
       {/* <SingleMaterial /> */}
-      <AlignmentTesting />
+      {/* <AlignmentTesting /> */}
     </>
   );
 }

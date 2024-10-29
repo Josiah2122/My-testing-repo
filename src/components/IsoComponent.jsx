@@ -1,5 +1,5 @@
 import React from "react";
-import firstImg from "./assets/first.png";
+import firstImg from "../assets/first.png";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 

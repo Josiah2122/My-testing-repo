@@ -3,7 +3,7 @@ import { FaTrashAlt } from "react-icons/fa";
 
 export default function LineItem({ item, handleCheck, handleDelete }) {
   return (
-    <li className="item" key={item.id}>
+    <li className="item">
       <input
         type="checkbox"
         name="item"
@@ -24,6 +24,7 @@ export default function LineItem({ item, handleCheck, handleDelete }) {
         onClick={() => handleDelete(item.id)}
         role="button"
         tabIndex="0"
+        aria-label={`Delete ${item.item}`}
       />
     </li>
   );

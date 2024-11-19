@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -6,12 +6,28 @@ import AddItems from "./AddItems";
 import SearchItem from "./SearchItem";
 
 function App() {
-  const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("ShoppingList"))
-  );
-
+  const API_URL = "http://localhost:3500/items";
+  const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
+
+  //You cannot use the async keyword in useEffect so you will see the old way of fetching inside useEffect
+  useEffect(() => {
+    //The old way would be fetch().then.catch()
+    const fetchItems = async () => {
+      try {
+        const response = await fetch(API_URL);
+        const listItems = await response.json();
+        console.log(listItems, "listItems");
+        setItems(listItems);
+      } catch (err) {
+        console.log(err.stack);
+      }
+    };
+
+    (async () => await fetchItems())();
+  }, []);
+  console.log(items, "items");
 
   const setAndSaveItems = (items) => {
     setItems(items);
@@ -55,7 +71,7 @@ function App() {
         <SearchItem search={search} setSearch={setSearch} />
         <Content
           items={items?.filter((item) =>
-            item.item.toLowerCase().includes(search.toLowerCase())
+            item?.item?.toLowerCase()?.includes(search?.toLowerCase())
           )}
           handleCheck={handleCheck}
           handleDelete={handleDelete}

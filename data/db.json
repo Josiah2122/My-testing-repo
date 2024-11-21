@@ -1,19 +1,19 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Almond, Unsalted, in Blue Bag",
+      "id": "1",
+      "item": "Almond, Unsalted, in Blue Bag",
       "checked": false
     },
     {
-      "id": 2,
-      "name": "Bread",
-      "checked": false
+      "id": "5",
+      "checked": false,
+      "item": "cake"
     },
     {
-      "id": 3,
-      "name": "Milk",
-      "checked": false
+      "id": "51",
+      "checked": false,
+      "item": "Eggs"
     }
   ]
 }
